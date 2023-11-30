@@ -1,0 +1,4 @@
+validiton pour les 3 a rajouter 
+Design the UX and code the front end html css bootsrap 
+add alert when MdP and email are not valid 
+Cloudinry and photos for all User , Event , Establishment 

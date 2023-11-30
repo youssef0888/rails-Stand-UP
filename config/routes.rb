@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :users
+  devise_scope :user do
+   get '/users/sign_out' => 'devise/sessions#destroy'
+   get '/users/:id/customer', to: 'pages#customer', as: :customer
+   get '/users/:id/comedian', to: 'pages#comedian', as: :comedian
+   get '/users/:id/owner', to: 'pages#owner', as: :owner
+  end
+
+  get '/users/:id/resetvationsAndEvent', to: "reservations#index", as: :customer_reservation_event
 end

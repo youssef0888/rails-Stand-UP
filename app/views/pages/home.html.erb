@@ -1,2 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="h-100 container d-flex flex-column align-items-center justify-content-center">
+  <div>
+    <% if user_signed_in? %>
+      <p> Welcome <%= current_user.firstName %></p>
+    <% else %>
+      <p>Welcome ...</p>
+    <% end %>
+  </div>
+  <div class="container d-flex flex-column align-items-center justify-content-center">
+    <h1>Welcomo to Stand Up</h1>
+    <h3>Where you can</h3>
+    <div data-controller="typed" data-typed-sentences-value= "<%=["Enjoy a SHOW", "Perform a SHOW", "Host a SHOW"]%>">
+      <h5 data-typed-target="first"></h5>
+      <h5 data-typed-target="second"></h5>
+      <h5 data-typed-target="third"></h5>
+    </div>
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to "Se Deconercter", destroy_user_session_path, class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to "Se Conercter", new_user_session_path, class: "btn btn-primary" %>
+        <%= link_to "S'inscrire",  new_user_registration_path, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

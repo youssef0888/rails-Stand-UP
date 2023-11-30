@@ -1,0 +1,29 @@
+<%= current_user.profile %>
+<div class="container mt-5">
+  <div class="m-5">
+    <h3> Bienvennu <%= current_user.firstName%> </h3>
+    <h3> Que voulez vous faire : </h3>
+  </div>
+  <div class="row my-4">
+    <div class="col">
+      <div class="card w-50">
+        <div class="card-body">
+          <h5 class="card-title">Mes Evenements </h5>
+          <p class="card-text">Consulter vous evenements </p>
+          <%= link_to "voir Mes reservation",  customer_reservation_event_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-4">
+    <div class="col">
+      <div class="card w-50">
+        <div class="card-body">
+          <h5 class="card-title">Reserver un evenements</h5>
+          <p class="card-text">Explorer et Reserver nos prochains evenements</p>
+          <a href="#" class="btn btn-primary">Reserver un Evenements</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

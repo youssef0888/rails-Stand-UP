@@ -5,7 +5,6 @@ class CreateEstablishments < ActiveRecord::Migration[7.0]
       t.string :address
       t.string :type
       t.integer :capacity
-
       t.timestamps
     end
   end
