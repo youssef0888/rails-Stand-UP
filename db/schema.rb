@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_211800) do
     t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false # as owner
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_establishments_on_user_id"
   end
 
@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_211800) do
     t.time "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false # as comedian
+    t.bigint "user_id", null: false
     t.bigint "establishment_id", null: false
     t.string "name"
     t.text "overview"
@@ -41,10 +41,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_28_211800) do
   create_table "reservations", force: :cascade do |t|
     t.integer "number_of_persons"
     t.date "date"
-    t.boolean "confirmed" # to be set faulse by default 
+    t.boolean "confirmed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false  # as customer
+    t.bigint "user_id", null: false
     t.bigint "event_id", null: false
     t.index ["event_id"], name: "index_reservations_on_event_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
