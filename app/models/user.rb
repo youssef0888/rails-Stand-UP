@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :reservations
   has_many :events, through: :reservations
   has_many :events
-  has_one :establishments
+  has_one :establishment
 
   validates :firstName, presence: true
   validates :lastName, presence: true

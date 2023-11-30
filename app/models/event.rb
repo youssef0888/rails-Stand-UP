@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  has_one :user
-  has_one :establishments
+  belongs_to :user
+  belongs_to :establishment
   has_many :reservations
 end
