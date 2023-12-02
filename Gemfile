@@ -55,6 +55,7 @@ gem "simple_form"
 gem "sassc-rails"
 gem "devise"
 gem 'htmlbeautifier'
+gem 'faker'
 
 
 group :development, :test do
