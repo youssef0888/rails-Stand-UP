@@ -55,7 +55,7 @@ gem "simple_form"
 gem "sassc-rails"
 gem "devise"
 gem 'htmlbeautifier'
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+gem 'faker'
 
 
 group :development, :test do

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'establishments/index'
-  get 'users', to: 'users#index'
-  get 'events/index'
-  # get 'events/:id'
+  get 'establishments', to: 'establishment#index'
+  get 'users', to: "user#index"
+  get 'events', to: "events#index"
+  #get 'events/:id'
   root to: "pages#home"
 
   devise_for :users
