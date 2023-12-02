@@ -14,10 +14,6 @@ class PagesController < ApplicationController
     end
   end
 
-  def customer
-    
-  end
-
   def comedian
     @comedianEvent = Event.where(user_id: current_user.id)
   end

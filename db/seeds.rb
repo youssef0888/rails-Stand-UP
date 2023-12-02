@@ -3,7 +3,13 @@ Event.destroy_all
 Establishment.destroy_all
 User.destroy_all
 puts "destroy finished"
-comedian = User.create!({email:"comedian@gmail.com",password:"123456",firstName:"coluche",lastName:"mend",profile:"Comedian",age:"54"})
+
+20.times do
+  User.create!({email: Faker::Internet.email,password:"123456",firstName:Faker::Creature::Animal.name,lastName:Faker::Creature::Animal.name,profile:"Comedian", age:"54"})
+end
+
+comedian = User.create!({email:"comedian2@gmail.com",password:"123456",firstName:"coluche",lastName:"mend",profile:"Comedian",age:"40"})
+# comedian = User.create!({email:"comedian3@gmail.com",password:"123456",firstName:"coluche",lastName:"mend",profile:"Comedian",age:"30"})
 customer = User.create!({email:"user@gmail.com",password:"123456",firstName:"gad",lastName:"elmaleh",profile:"Customer",age:"54"})
 owner = User.create!({email:"owner@gmail.com",password:"123456",firstName:"samuel",lastName:"lj",profile:"Owner",age:"54"})
 
