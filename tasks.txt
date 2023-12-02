@@ -1,4 +1,5 @@
-validiton pour les 3 a rajouter 
-Design the UX and code the front end html css bootsrap 
-add alert when MdP and email are not valid 
-Cloudinry and photos for all User , Event , Establishment 
+validiton pour les 3 a rajouter
+Design the UX and code the front end html css bootsrap
+add alert when MdP and email are not valid
+Cloudinry and photos for all User , Event , Establishment
+mise à jour age : donner date de naissance // eviter les erreurs sur les ages 
