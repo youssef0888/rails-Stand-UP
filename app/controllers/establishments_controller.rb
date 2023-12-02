@@ -1,5 +1,5 @@
 class EstablishmentsController < ApplicationController
   def index
-    @establishment = Establishment.all
+    @establishments = Establishment.all
   end
 end

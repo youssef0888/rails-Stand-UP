@@ -1,0 +1,25 @@
+.scene {
+  height: 200px;
+  width: calc(18rem-1px);
+  border-radius: 8px 8px 0 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: start;
+  width: 80vw;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.card {
+  margin: 16px;
+  padding: 0px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 4px 4px 10px grey;
+}
+
+.row {
+  padding: 0px;
+}

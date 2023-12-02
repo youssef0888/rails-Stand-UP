@@ -9,15 +9,18 @@ owner = User.create!({email:"owner@gmail.com",password:"123456",firstName:"samue
 
 puts "creating Users done!"
 
-establishment = Establishment.create!({name: "Back stage", address: "blvd Anfa",capacity: 25 ,  type: 'bar', user_id: owner.id})
+10.times do
+establishment = Establishment.create!({name: Faker::Movie.title, address: Faker::Address.street_address, capacity: 30 ,
+  type: 'bar', bio: Faker::Quotes::Shakespeare.hamlet_quote, user_id: owner.id})
+end
 
 event = Event.create!({
- name: 'homoragi', 
- overview: "Ce spectacle est un medley d'humour et de musique qui réunit Humouraji, 
- le collectif d'humoristes le plus populaire du Maroc et Fnaire, le groupe pilier de la musique marocaine." , 
- time: Time.new, 
- establishment_id: establishment.id,
- date: Date.new(2023, 11, 30), 
+ name: 'homoragi',
+ overview: "Ce spectacle est un medley d'humour et de musique qui réunit Humouraji,
+ le collectif d'humoristes le plus populaire du Maroc et Fnaire, le groupe pilier de la musique marocaine." ,
+ time: Time.new,
+ establishment_id: Establishment.first.id,
+ date: Date.new(2023, 11, 30),
  user_id: comedian.id})
 
 Reservation.create!({number_of_persons: 3 , date: Date.new(2023, 11, 28), user_id: customer.id, event_id:event.id  , confirmed: false })
