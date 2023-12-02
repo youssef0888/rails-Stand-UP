@@ -1,2 +1,19 @@
-<h1>Establishments#index</h1>
-<p>Find me in app/views/establishments/index.html.erb</p>
+<h1>Nos établissements partenaires </h1>
+
+<div class="card-container">
+  <% @establishments.map do |establishment|%>
+      <div class="row">
+          <div class="card" style="width: 18rem;">
+          <% random_image = ["chapelleshow.png", "comedyclub1.png", "comedyclub2.png", "comedyclub3.png"].sample %>
+            <img src= <%= image_url(random_image)%> class="card-img-top scene" alt="backstage">
+            <div class="card-body">
+              <h5 class="card-title"><%= establishment.name %></h5>
+                <h6 class="card-subtitle mb-2 text-muted"> Adresse: <%= establishment.address %></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> Capacité: <%= establishment.capacity %></h6>
+                <h6 class="card-subtitle mb-2 text-muted"> <%= establishment.bio %></h6>
+              <a href="#" class="card-link">Show events</a>
+            </div>
+          </div>
+      </div>
+  <% end %>
+</div>
