@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'establishments', to: 'establishment#index'
+  resources :establishments
   get 'users', to: "user#index"
   get 'events', to: "events#index"
   #get 'events/:id'
