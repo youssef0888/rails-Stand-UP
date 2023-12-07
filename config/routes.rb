@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :establishments
-  get 'users', to: "user#index"
+  get 'establishments', to: 'establishments#index'
+  get 'users', to: "users#index"
   get 'events', to: "events#index"
   #get 'events/:id'
   root to: "pages#home"
