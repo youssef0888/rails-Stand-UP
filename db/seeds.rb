@@ -16,18 +16,12 @@ owner = User.create!({email:"owner@gmail.com",password:"123456",firstName:"samue
 
 puts "creating Users done!"
 
-5.times do 
-event = Event.create!({
- name: Faker::Book.title, 
- overview: Faker::Quote.famous_last_words , 
- time: Time.new, 
- establishment_id: establishment.id,
- date: Date.new(2023, 11, 30), 
-10.times do
-establishment = Establishment.create!({name: Faker::Movie.title, address: Faker::Address.street_address, capacity: 30 ,
+5.times do
+  establishment = Establishment.create!({name: Faker::Movie.title, address: Faker::Address.street_address, capacity: 30 ,
   type: 'bar', bio: Faker::Quotes::Shakespeare.hamlet_quote, user_id: owner.id})
 end
 
+10.times do
 event = Event.create!({
  name: 'homoragi',
  overview: "Ce spectacle est un medley d'humour et de musique qui réunit Humouraji,
@@ -37,5 +31,5 @@ event = Event.create!({
  date: Date.new(2023, 11, 30),
  user_id: comedian.id})
 end
-Reservation.create!({number_of_persons: 3 , date: Date.new(2023, 11, 28), user_id: customer.id, event_id:event.id  , confirmed: false })
+Reservation.create!({number_of_persons: 3 , date: Date.new(2023, 11, 28), user_id: customer.id, event_id:Event.first.id  , confirmed: false })
 puts "seeds done"

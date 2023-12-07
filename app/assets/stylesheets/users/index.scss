@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 #comedian-card {
 display:flex ;
-justify-content: space-between;
+justify-content: start;
 flex-wrap: wrap;
 width: 80vw ;
 margin: 0% auto;
 
+.d-flex {
+background-color: #ceced1;
+box-shadow: 4px 4px 10px grey;
+}
 .wrapper,
 .wrapper .img-area,
 // .social-icons a,
