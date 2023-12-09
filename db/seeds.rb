@@ -3,9 +3,9 @@ Event.destroy_all
 Establishment.destroy_all
 User.destroy_all
 puts "destroy finished"
-comedian = User.create!({email: "comedian@gmail.com", password: "123456", firstName: "coluche", lastName:"mend", profile: "Comedian", age: "54"})
-customer = User.create!({email: "user@gmail.com", password: "123456", firstName: "gad",lastName:"elmaleh", profile: "Customer", age: "54"})
-owner = User.create!({email: "owner@gmail.com", password: "123456", firstName: "samuel",lastName:"lj", profile: "Owner", age: "54"})
+comedian = User.create!({email: "comedian@gmail.com", password: "123456", first_name: "coluche", last_name:"mend", profile: "Comedian", age: "54"})
+customer = User.create!({email: "user@gmail.com", password: "123456", first_name: "gad",last_name:"elmaleh", profile: "Customer", age: "54"})
+owner = User.create!({email: "owner@gmail.com", password: "123456", first_name: "samuel",last_name:"lj", profile: "Owner", age: "54"})
 
 puts "creating Users done!"
 

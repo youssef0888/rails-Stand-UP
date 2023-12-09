@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :events
   has_one :establishment
 
-  validates :firstName, presence: true
-  validates :lastName, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
   validates :profile, presence: true, inclusion: { in: ["Customer", "Comedian", "Owner"] }
 end

@@ -1,8 +1,27 @@
+<h1> Nos comediens </h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 my-3">
+        <%= form_with url: users_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "choisissez votre comedien !"
+            %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+</div>
+
+
+
+
 
 <div id="comedian-card" >
 <% @comedians.each do |comedian| %>
-
-
   <div class="wrapper">
     <div class="img-area">
       <div class="inner-area">
@@ -11,7 +30,7 @@
       </div>
     </div>
 
-    <div class="name"><%=comedian.firstName%> <%=comedian.lastName%></div>
+    <div class="name"><%=comedian.first_name%> <%=comedian.last_name%></div>
 
     <div class="about">Age : <%=comedian.age%> Years</div>
 
