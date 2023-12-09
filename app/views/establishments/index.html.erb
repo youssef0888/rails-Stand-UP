@@ -1,5 +1,21 @@
 <h1>Nos établissements partenaires </h1>
 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+    <div class="row justify-content-center">
+      <div class="col-sm-8 my-3">
+        <%= form_with url: establishments_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "choisissez votre salle de spectacle!"
+            %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+</div>
+
 <div class="card-container">
   <% @establishments.map do |establishment|%>
       <div class="row">
@@ -11,7 +27,7 @@
                 <h6 class="card-subtitle mb-2 text-muted"> Adresse: <%= establishment.address %></h6>
                 <h6 class="card-subtitle mb-2 text-muted"> Capacité: <%= establishment.capacity %></h6>
                 <h6 class="card-subtitle mb-2 text-muted"> <%= establishment.bio %></h6>
-              <a href="#" class="card-link">Show events</a>
+              <a href="/events?establishment_id=<%= establishment.id %>" class="card-link">Show events</a>
             </div>
           </div>
       </div>

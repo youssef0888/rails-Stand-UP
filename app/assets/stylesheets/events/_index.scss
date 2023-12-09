@@ -29,7 +29,8 @@
   overflow: hidden;
   height: 140px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 5px 8px 25px rgba(0,0,0,0.3);
+  border-radius: 25px;
   display: flex;
   align-items: center;
 }
@@ -55,6 +56,21 @@
 }
 
 .card-product .card-product-infos {
+  p{
+    font-family:'Nunito';
+    line-height: 1,6;
+    text-shadow: 4px 6px 12px rgba(0,0,0,0.3);
+  }
+h2{
+  font-family: 'Nunito';
+  font-size: 22px;
+  font-weight: 500;
+}
+h6{
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 400;
+}
   padding: 16px;
   width:100%;
 }
@@ -65,12 +81,22 @@
   bottom: 12px;
   margin-top: 22px;
   margin-bottom: -4px;
-  a{
-    background-color: black;
+  a.card-link{
+    background-color:#e876cd;
     color: white;
     padding:8px 16px;
     border-radius: 16px;
     text-decoration: none;
   
   }
+  a.card-link1{
+    background-color:#65d1e6;
+    color: white;
+    padding:8px 16px;
+    border-radius: 16px;
+    text-decoration: none;
+  
+  }
+
 }
+

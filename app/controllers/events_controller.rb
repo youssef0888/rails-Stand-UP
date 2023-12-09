@@ -5,6 +5,12 @@ before_action :set_event, only: [:show, :create, :edit]
     if params[:query].present?
       @events = @events.where("name ILIKE ?", "%#{params[:query]}%")
     end
+    if params[:establishment_id].present?
+      @events = @events.where("establishment_id = ?", "#{params[:establishment_id]}")
+    end
+    if params[:comedian_id].present?
+      @events = @events.where("comedian_id = ?", "#{params[:comedian_id]}")
+    end
   end
   
   def show
