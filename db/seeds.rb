@@ -6,13 +6,13 @@ User.destroy_all
 puts "destroy finished"
 
 20.times do
-  User.create!({email: Faker::Internet.email,password:"123456",firstName:Faker::Creature::Animal.name,lastName:Faker::Creature::Animal.name,profile:"Comedian", age:"54"})
+  User.create!({email: Faker::Internet.email,password:"123456",first_name:Faker::Creature::Animal.name,last_name:Faker::Creature::Animal.name,profile:"Comedian", age:"54"})
 end
 
-comedian = User.create!({email:"comedian2@gmail.com",password:"123456",firstName:"coluche",lastName:"mend",profile:"Comedian",age:"40"})
-# comedian = User.create!({email:"comedian3@gmail.com",password:"123456",firstName:"coluche",lastName:"mend",profile:"Comedian",age:"30"})
-customer = User.create!({email:"user@gmail.com",password:"123456",firstName:"gad",lastName:"elmaleh",profile:"Customer",age:"54"})
-owner = User.create!({email:"owner@gmail.com",password:"123456",firstName:"samuel",lastName:"lj",profile:"Owner",age:"54"})
+comedian = User.create!({email:"comedian2@gmail.com",password:"123456",first_name:"coluche",last_name:"mend",profile:"Comedian",age:"40"})
+# comedian = User.create!({email:"comedian3@gmail.com",password:"123456",first_name:"coluche",last_name:"mend",profile:"Comedian",age:"30"})
+customer = User.create!({email:"user@gmail.com",password:"123456",first_name:"gad",last_name:"elmaleh",profile:"Customer",age:"54"})
+owner = User.create!({email:"owner@gmail.com",password:"123456",first_name:"samuel",last_name:"lj",profile:"Owner",age:"54"})
 
 puts "creating Users done!"
 

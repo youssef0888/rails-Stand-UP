@@ -1,7 +1,7 @@
 <div class="h-100 container d-flex flex-column align-items-center justify-content-center">
   <div>
     <% if user_signed_in? %>
-      <p> Welcome <%= current_user.firstName %></p>
+      <p> Welcome <%= current_user.first_name %></p>
     <% else %>
       <p>Welcome ...</p>
     <% end %>
